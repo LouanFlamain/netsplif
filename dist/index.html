@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +8,21 @@
     <title>Netsplif</title>
   </head>
   <body>
+    <div class="loader is-active">
+      <h2 class="h2-loader">Loading, wait please</h2>
+      <div class="wrapper">
+        <div class="toiletroll">
+          <div class="roll"></div>
+          <div class="papers">
+            <div class="paper">Loading</div>
+            <div class="paper">Wait</div>
+            <div class="paper">Please</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <header>
-      <h1>Netsplif</h1>
+      <h1 class="Netsplif-logo">Netsplif</h1>
       <div>
         <div class="header-search-bar">
           <form id="form">
@@ -27,6 +40,39 @@
         </div>
       </div>
     </header>
+
+    <p class="count"></p>
+    <div id="main">
+      <!--<div class="main-container">
+        <h2>titre</h2>
+        <div class="main-container-image"></div>
+        <p class="main-container-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id culpa
+          blanditiis repellat quae aliquid molestiae repellendus tempora odio
+          maxime iusto dicta vero, molestias, maiores sunt quisquam fugit ipsa!
+          Id, perferendis!
+        </p>
+      </div>-->
+    </div>
+
+    <div class="player">
+      <button class="btn-player-close">X</button>
+      <div class="player-responsive">
+        <h2 class="player-title"></h2>
+        <img class="player-image" alt="image">
+      </div>
+      <p class="player-synopsis"></p>
+      <p class="player-language"></p>
+      <p class="player-release-date"></p>
+    </div>
+
+    <div class="btn_page is-hidden">
+      <button id="prev">Prev</button>
+      <p class="current_page"></p>
+      <p>/</p>
+      <p class="last_page"></p>
+      <button id="skip">Skip</button>
+    </div>
 
     <script src="/index.f85ccfd0.js"></script>
   </body>

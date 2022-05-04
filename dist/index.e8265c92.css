@@ -92,13 +92,14 @@ h2 {
 @media (orientation: landscape) {
   .main-container-image {
     border: none;
-    border-radius: 0;
+    border-radius: 20px;
   }
 }
 
 @media (orientation: landscape) {
   .main-container-image:hover {
     border: 2px solid #000;
+    border-radius: 0;
     transform: scale(1.1);
   }
 }

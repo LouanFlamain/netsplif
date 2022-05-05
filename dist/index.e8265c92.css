@@ -131,7 +131,7 @@ h2 {
   width: 80%;
   height: 16vh;
   text-align: center;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .main-container {

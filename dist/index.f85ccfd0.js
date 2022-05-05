@@ -117,9 +117,24 @@ do {
     page = 1;
     $main.innerHTML = '     <div class="projet-presentation"><input type="radio" name="position" checked /><input type="radio" name="position" /><input type="radio" name="position" /><input type="radio" name="position" /><input type="radio" name="position" /><main id="carousel"><div class="item"><h3>Pr\xe9sentation du projet : </h3><p>Cr\xe9er un service de streaming vid\xe9o bas\xe9 sur un concept original</p><h3>Int\xe9gration : </h3><ul><li>Responsive (\xe0 partir de 320px)</li><li>Mobile first</li><li>HTML s\xe9mantique</li><li>Ressources optimis\xe9es</li><li>Utilisation de SASS</li><li>BEM fortement conseill\xe9</li><li>Pas de framework CSS !</li></ul></div><div class="item"><h3>Louan Flamain :</h3><p>html/css/js(bar de recherche, syst\xe8me de pages et affichage du responsive)</p></div><div class="item"><h3>Hassan Aidibe</h3><p>R\xe9alisation du syst\xe8me de films al\xe9atoires</p></div><div class="item"><h3>Tom Bonnet : </h3><p>menu-burger et recherche par courant cin\xe9matographique</p></div><div class="item"><h2>Netsplif</h2>';
 });
+// CODE POUR MENU BURGER
 $btnPlayerClose.addEventListener("click", function() {
     $player.classList.remove("player-is-active");
     $blur.classList.add("is-hidden");
+});
+let $btnBurger = document.querySelector(".header-menu-burger");
+let $wholeMenu = document.querySelector(".border-whole");
+let $btnCloseBurger = document.querySelector(".btn-close-menu-burger");
+$btnBurger.addEventListener("click", function() {
+    console.log("test");
+    $wholeMenu.classList.add("menu-burger-is-active");
+    $blur.classList.remove("is-hidden");
+    console.log("test");
+});
+$btnCloseBurger.addEventListener("click", function() {
+    $wholeMenu.classList.toggle("menu-burger-is-active");
+    $blur.classList.add("is-hidden");
+    console.log("click");
 });
 
 //# sourceMappingURL=index.f85ccfd0.js.map

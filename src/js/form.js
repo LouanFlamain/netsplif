@@ -195,8 +195,24 @@ $netsplifLogo.addEventListener("click", function () {
     "<h2>Netsplif</h2>";
   "</div>" + "<main>" + "</div>";
 });
-
+// CODE POUR MENU BURGER
 $btnPlayerClose.addEventListener("click", function () {
   $player.classList.remove("player-is-active");
   $blur.classList.add("is-hidden");
+});
+
+let $btnBurger = document.querySelector(".header-menu-burger");
+let $wholeMenu = document.querySelector(".border-whole");
+let $btnCloseBurger = document.querySelector(".btn-close-menu-burger");
+
+$btnBurger.addEventListener("click", function () {
+  console.log("test");
+  $wholeMenu.classList.add("menu-burger-is-active");
+  $blur.classList.remove("is-hidden");
+  console.log("test");
+});
+$btnCloseBurger.addEventListener("click", function () {
+  $wholeMenu.classList.toggle("menu-burger-is-active");
+  $blur.classList.add("is-hidden");
+  console.log("click");
 });

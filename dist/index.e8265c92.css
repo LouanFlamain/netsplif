@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400";
 header {
   height: 12vh;
-  background-color: gray;
+  background-color: #42374e;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -70,6 +70,10 @@ input {
   padding: 0;
 }
 
+body {
+  background: linear-gradient(90deg, #002f77 21%, #65078e 69%);
+}
+
 #main {
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -112,6 +116,7 @@ h2 {
 }
 
 .main-container {
+  background-color: bisque;
   border: 1px solid #000;
   border-radius: 20px;
   flex-direction: column;
@@ -129,6 +134,7 @@ h2 {
 
 .count {
   text-align: center;
+  color: #fff;
 }
 
 .btn_page {
@@ -141,7 +147,7 @@ h2 {
 
 .btn_page button {
   cursor: pointer;
-  background-color: #7fffd4;
+  background-color: bisque;
   border-radius: 10px;
   margin: 0 10px;
   padding: 10px;
@@ -163,6 +169,10 @@ h2 {
   border-radius: 10px;
   margin-top: 10px;
   padding: 5px;
+}
+
+.page_form {
+  color: #fff;
 }
 
 .loader {
@@ -368,8 +378,124 @@ h2 {
 }
 
 .player-image {
-  width: 60%;
-  height: auto;
+  width: auto;
+  height: 40vh;
+}
+
+@media (orientation: landscape) {
+  .player-image {
+    width: auto;
+    height: 60vh;
+  }
+}
+
+.projet-presentation {
+  height: 600px;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  place-items: center;
+  margin: 0;
+  display: grid;
+}
+
+main#carousel {
+  width: 100vw;
+  height: 500px;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+  pointer-events: none;
+  grid-area: 1 / 1 / 2 / 8;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+div.item {
+  width: 300px;
+  height: 400px;
+  --r: calc(var(--position)  - var(--offset) );
+  --abs: max(calc(var(--r) * -1), var(--r) );
+  transform: rotateY(calc(-10deg * var(--r) ) ) translateX(calc(-300px * var(--r) ) );
+  z-index: calc(var(--position)  - var(--abs) );
+  text-align: center;
+  background-color: coral;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  transition: all .25s linear;
+  display: flex;
+  position: absolute;
+}
+
+div.item:nth-of-type(1) {
+  --offset: 1;
+  background-color: #90f1ef;
+}
+
+div.item:nth-of-type(2) {
+  --offset: 2;
+  background-color: #ff70a6;
+}
+
+div.item:nth-of-type(3) {
+  --offset: 3;
+  background-color: #ff9770;
+}
+
+div.item:nth-of-type(4) {
+  --offset: 4;
+  background-color: #ffd670;
+}
+
+div.item:nth-of-type(5) {
+  --offset: 5;
+  background-color: #e9ff70;
+}
+
+input:nth-of-type(1) {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+input:nth-of-type(1):checked ~ main#carousel {
+  --position: 1;
+}
+
+input:nth-of-type(2) {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+input:nth-of-type(2):checked ~ main#carousel {
+  --position: 2;
+}
+
+input:nth-of-type(3) {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+input:nth-of-type(3):checked ~ main#carousel {
+  --position: 3;
+}
+
+input:nth-of-type(4) {
+  grid-area: 2 / 5 / 3 / 6;
+}
+
+input:nth-of-type(4):checked ~ main#carousel {
+  --position: 4;
+}
+
+input:nth-of-type(5) {
+  grid-area: 2 / 6 / 3 / 7;
+}
+
+input:nth-of-type(5):checked ~ main#carousel {
+  --position: 5;
 }
 
 /*# sourceMappingURL=index.e8265c92.css.map */

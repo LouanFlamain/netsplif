@@ -4,6 +4,14 @@
   }
 }
 
+body {
+  background: rgb(0, 47, 119);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 47, 119, 1) 21%,
+    rgba(101, 7, 142, 1) 69%
+  );
+}
 #main {
   display: flex;
   flex-wrap: wrap;
@@ -47,6 +55,7 @@ h2 {
   margin: 10px;
   padding: 20px 0;
   border-radius: 20px;
+  background-color: bisque;
 
   @include landscape {
     width: 23%;
@@ -54,6 +63,7 @@ h2 {
 }
 .count {
   text-align: center;
+  color: white;
 }
 .btn_page {
   display: flex;
@@ -64,7 +74,7 @@ h2 {
 }
 .btn_page button {
   padding: 10px;
-  background-color: aquamarine;
+  background-color: bisque;
   cursor: pointer;
   margin: 0 10px;
   border-radius: 10px;
@@ -84,4 +94,7 @@ h2 {
   padding: 5px;
   background-color: aquamarine;
   border-radius: 10px;
+}
+.page_form {
+  color: white;
 }

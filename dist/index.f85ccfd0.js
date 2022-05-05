@@ -74,6 +74,7 @@ function showMovies(movies) {
     $lastVisiblePage = movies.total_pages;
     $counterPage();
     $returnTopPage();
+    $count.classList.remove("is-hidden");
 }
 let $counterPage = function() {
     $currentPage.innerHTML = page;
@@ -103,17 +104,16 @@ $btnSkip.addEventListener("click", function() {
     if (page < $lastVisiblePage) page += 1;
     getMovies($value);
 });
-let $number_value = 0;
+/*let $number_value = 0;
 do {
-    $loader.classList.add("is-active");
-    getMovies("naruto");
-    $number_value++;
-}while ($number_value < 1)
-$netsplifLogo.addEventListener("click", function() {
-    $loader.classList.add("is-active");
+  $loader.classList.add("is-active");
+  getMovies("naruto");
+  $number_value++;
+} while ($number_value < 1);*/ $netsplifLogo.addEventListener("click", function() {
+    $count.classList.add("is-hidden");
     $btnPage.classList.add("is-hidden");
     page = 1;
-    getMovies("naruto");
+    $main.innerHTML = '     <div class="projet-presentation"><input type="radio" name="position" checked /><input type="radio" name="position" /><input type="radio" name="position" /><input type="radio" name="position" /><input type="radio" name="position" /><main id="carousel"><div class="item"><h3>Pr\xe9sentation du projet : </h3><p>Cr\xe9er un service de streaming vid\xe9o bas\xe9 sur un concept original</p><h3>Int\xe9gration : </h3><ul><li>Responsive (\xe0 partir de 320px)</li><li>Mobile first</li><li>HTML s\xe9mantique</li><li>Ressources optimis\xe9es</li><li>Utilisation de SASS</li><li>BEM fortement conseill\xe9</li><li>Pas de framework CSS !</li></ul></div><div class="item"><h3>Louan Flamain :</h3><p>html/css/js(bar de recherche, syst\xe8me de pages et affichage du responsive)</p></div><div class="item"><h3>Hassan Aidibe</h3><p>R\xe9alisation du syst\xe8me de films al\xe9atoires</p></div><div class="item"><h3>Tom Bonnet : </h3><p>menu-burger et recherche par courant cin\xe9matographique</p></div><div class="item"><h2>Netsplif</h2>';
 });
 $btnPlayerClose.addEventListener("click", function() {
     $player.classList.remove("player-is-active");

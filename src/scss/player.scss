@@ -45,6 +45,10 @@
   overflow: scroll;
 }
 .player-image {
-  width: 60%;
-  height: auto;
+  width: auto;
+  height: 40vh;
+  @include landscape {
+    width: auto;
+    height: 60vh;
+  }
 }

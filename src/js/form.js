@@ -101,6 +101,7 @@ function showMovies(movies) {
   $lastVisiblePage = movies.total_pages;
   $counterPage();
   $returnTopPage();
+  $count.classList.remove("is-hidden");
 }
 
 let $counterPage = function () {
@@ -142,18 +143,54 @@ $btnSkip.addEventListener("click", function () {
   getMovies($value);
 });
 
-let $number_value = 0;
+/*let $number_value = 0;
 do {
   $loader.classList.add("is-active");
   getMovies("naruto");
   $number_value++;
-} while ($number_value < 1);
+} while ($number_value < 1);*/
 
 $netsplifLogo.addEventListener("click", function () {
-  $loader.classList.add("is-active");
+  $count.classList.add("is-hidden");
   $btnPage.classList.add("is-hidden");
   page = 1;
-  getMovies("naruto");
+  $main.innerHTML =
+    '     <div class="projet-presentation">' +
+    '<input type="radio" name="position" checked />' +
+    '<input type="radio" name="position" />' +
+    '<input type="radio" name="position" />' +
+    '<input type="radio" name="position" />' +
+    '<input type="radio" name="position" />' +
+    '<main id="carousel">' +
+    '<div class="item">' +
+    "<h3>Présentation du projet : </h3>" +
+    "<p>Créer un service de streaming vidéo basé sur un concept original</p>" +
+    "<h3>Intégration : </h3>" +
+    "<ul>" +
+    "<li>Responsive (à partir de 320px)</li>" +
+    "<li>Mobile first</li>" +
+    "<li>HTML sémantique</li>" +
+    "<li>Ressources optimisées</li>" +
+    "<li>Utilisation de SASS</li>" +
+    "<li>BEM fortement conseillé</li>" +
+    "<li>Pas de framework CSS !</li>" +
+    "</ul>" +
+    "</div>" +
+    '<div class="item">' +
+    "<h3>Louan Flamain :</h3>" +
+    "<p>html/css/js(bar de recherche, système de pages et affichage du responsive)</p>" +
+    "</div>" +
+    '<div class="item">' +
+    "<h3>Hassan Aidibe</h3>" +
+    "<p>Réalisation du système de films aléatoires</p>" +
+    "</div>" +
+    '<div class="item">' +
+    "<h3>Tom Bonnet : </h3>" +
+    "<p>menu-burger et recherche par courant cinématographique</p>" +
+    "</div>" +
+    '<div class="item">' +
+    "<h2>Netsplif</h2>";
+  "</div>" + "<main>" + "</div>";
 });
 
 $btnPlayerClose.addEventListener("click", function () {

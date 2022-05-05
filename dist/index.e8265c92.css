@@ -12,6 +12,12 @@ h1 {
   margin-left: 20px;
 }
 
+@media (orientation: landscape) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
 .Netsplif-logo {
   cursor: pointer;
   transition: all .3s;
@@ -62,6 +68,19 @@ input {
   width: 10px;
   height: 2px;
   background-color: #000;
+}
+
+.logo {
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.logo-p {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 13px;
 }
 
 * {

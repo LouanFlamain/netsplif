@@ -89,6 +89,10 @@ input {
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background: linear-gradient(90deg, #002f77 21%, #65078e 69%);
 }
@@ -527,6 +531,10 @@ input:nth-of-type(5) {
 
 input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 /*# sourceMappingURL=index.e8265c92.css.map */

@@ -29,6 +29,8 @@ let $lastVisiblePage;
 let $currentPage = document.querySelector(".current_page");
 let $lastPage = document.querySelector(".last_page");
 
+let $blur = document.querySelector(".blur-background");
+
 function getMovies(query) {
   fetch(
     API_URL +
@@ -96,6 +98,7 @@ function showMovies(movies) {
         "langue d'origine : " + Allmovies.original_language;
       $playerReleaseDate.innerText =
         "date de sortie : " + Allmovies.release_date;
+      $blur.classList.remove("is-hidden");
     });
   }
   $lastVisiblePage = movies.total_pages;
@@ -195,4 +198,5 @@ $netsplifLogo.addEventListener("click", function () {
 
 $btnPlayerClose.addEventListener("click", function () {
   $player.classList.remove("player-is-active");
+  $blur.classList.add("is-hidden");
 });

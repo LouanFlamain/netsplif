@@ -23,6 +23,7 @@ let page = 1;
 let $lastVisiblePage;
 let $currentPage = document.querySelector(".current_page");
 let $lastPage = document.querySelector(".last_page");
+let $blur = document.querySelector(".blur-background");
 function getMovies(query) {
     fetch(API_URL + "/search/movie?api_key=" + API_KEY + "&query=" + query + "&page=" + page).then((response)=>response.json()
     ).then((response)=>showMovies(response)
@@ -69,6 +70,7 @@ function showMovies(movies) {
             $playerImage.setAttribute("src", IMAGES_URL + Allmovies.poster_path);
             $playerLanguage.innerText = "langue d'origine : " + Allmovies.original_language;
             $playerReleaseDate.innerText = "date de sortie : " + Allmovies.release_date;
+            $blur.classList.remove("is-hidden");
         });
     }
     $lastVisiblePage = movies.total_pages;
@@ -117,6 +119,7 @@ do {
 });
 $btnPlayerClose.addEventListener("click", function() {
     $player.classList.remove("player-is-active");
+    $blur.classList.add("is-hidden");
 });
 
 //# sourceMappingURL=index.f85ccfd0.js.map

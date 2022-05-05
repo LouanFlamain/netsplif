@@ -339,7 +339,8 @@ h2 {
   width: 80%;
   height: 80vh;
   text-align: center;
-  background-color: #7fffd4;
+  z-index: 900;
+  background-color: bisque;
   border: 2px solid #000;
   border-radius: 30px;
   flex-direction: column;
@@ -387,6 +388,17 @@ h2 {
     width: auto;
     height: 60vh;
   }
+}
+
+.blur-background {
+  width: 100%;
+  height: 100%;
+  z-index: 800;
+  background: linear-gradient(90deg, #002f77 21%, #65078e 69%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .projet-presentation {
